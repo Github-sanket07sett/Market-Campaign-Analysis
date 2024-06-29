@@ -105,3 +105,8 @@ plt.title('Total Spend per Channel')
 plt.show()
 
 #Total Sales per channel
+Total_sales_channel=df['Total conversion value, GBP'].groupby(df["Channel"]).sum()
+print(Total_sales_channel)
+plt.pie(Total_sales_channel,labels=Total_sales_channel.index,autopct='%1.1f%%')
+plt.title('Total Sales per Channel')
+plt.show()
