@@ -51,6 +51,13 @@ plt.bar(Total_sales_Campaign.index,Total_sales_Campaign.values)
 plt.title('Total Sales per Campaign')
 plt.show()
 
+#Total sales per channel
+Total_sales_channel=df["Total conversion value, GBP"].groupby(df["Channel"]).sum()
+print(Total_sales_channel)
+plt.pie(Total_sales_channel,labels=Total_sales_channel.index,autopct='%1.1f%%')
+plt.title('Total Sales per Channel')
+plt.show()
+
 #calculate total Spend
 total_spend = df['Spend, GBP'].sum()
 
@@ -174,3 +181,38 @@ print("conversion from device",conversion_device)
 
 conversion_month=df['Conversions'].groupby(df["Month"]).sum()/df['Clicks'].groupby(df["Month"]).sum()*100
 print("conversion from month",conversion_month)
+
+profit_city=df['Total conversion value, GBP'].groupby(df["City"]).sum()-df['Spend, GBP'].groupby(df["City"]).sum()
+print("profit from city:",profit_city)
+plt.bar(profit_city.index,profit_city.values)
+plt.xlabel('City')
+plt.ylabel('Profit')
+plt.title('Profit from City')
+plt.show()
+
+profit_channel=df['Total conversion value, GBP'].groupby(df["Channel"]).sum()-df['Spend, GBP'].groupby(df["Channel"]).sum()
+print("profit from channel:",profit_channel)
+plt.bar(profit_channel.index,profit_channel.values)
+plt.xlabel('Channel')
+plt.ylabel('Profit')
+plt.title('Profit from Channel')
+plt.show()
+
+profit_month=df['Total conversion value, GBP'].groupby(df["Month"]).sum()-df['Spend, GBP'].groupby(df["Month"]).sum()
+print("profit from campaign:",profit_month)
+plt.bar(profit_month.index,profit_month.values)
+plt.xlabel('Month')
+plt.ylabel('Profit')
+plt.title('Profit from Month')
+plt.show()
+
+#CPC by Channel
+cpc_channel=df['Daily Average CPC'].groupby(df["Channel"]).sum()
+
+print("cpc from channel:",cpc_channel)
+plt.barh(cpc_channel.index,cpc_channel.values)
+plt.xlabel('CPC')
+plt.ylabel('Channel')
+plt.title('CPC from Channel')
+plt.show()
+
