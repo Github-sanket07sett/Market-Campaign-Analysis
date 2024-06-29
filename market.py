@@ -37,6 +37,13 @@ plt.pie(total_sales_city,labels=total_sales_city.index,autopct='%1.1f%%')
 plt.title('total sales per city')
 plt.show()
 
+#Total Sales per day
+Total_sales_per_day=df["Total conversion value, GBP"].groupby(df["Day of the Week"]).sum()
+print(Total_sales_per_day)
+plt.pie(Total_sales_per_day,labels=Total_sales_per_day.index,autopct='%1.1f%%')
+plt.title('Total Sales per Day')
+plt.show()
+
 #calculate total Spend
 total_spend = df['Spend, GBP'].sum()
 
@@ -89,3 +96,12 @@ print("total comments:",total_comments)
 #average comments
 average_comments=df['Comments'].mean()
 print('average comments:',average_comments)
+
+#Total Spend Per Channel
+total_spend_channel=df['Spend, GBP'].groupby(df["Channel"]).sum()
+print(total_spend_channel)
+plt.pie(total_spend_channel,labels=total_spend_channel.index,autopct='%1.1f%%')
+plt.title('Total Spend per Channel')
+plt.show()
+
+#Total Sales per channel
