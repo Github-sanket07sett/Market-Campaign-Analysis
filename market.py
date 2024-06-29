@@ -44,6 +44,13 @@ plt.pie(Total_sales_per_day,labels=Total_sales_per_day.index,autopct='%1.1f%%')
 plt.title('Total Sales per Day')
 plt.show()
 
+#Total sales By Campaign type
+Total_sales_Campaign=df['Total conversion value, GBP'].groupby(df["Campaign"]).sum()
+print(Total_sales_Campaign)
+plt.bar(Total_sales_Campaign.index,Total_sales_Campaign.values)
+plt.title('Total Sales per Campaign')
+plt.show()
+
 #calculate total Spend
 total_spend = df['Spend, GBP'].sum()
 
@@ -110,3 +117,60 @@ print(Total_sales_channel)
 plt.pie(Total_sales_channel,labels=Total_sales_channel.index,autopct='%1.1f%%')
 plt.title('Total Sales per Channel')
 plt.show()
+
+#Total Sales from Device Type
+total_sales_per_device=df['Total conversion value, GBP'].groupby(df["Device"]).sum()
+print(total_sales_per_device)
+plt.pie(total_sales_per_device,labels=total_sales_per_device.index,autopct='%1.1f%%')
+plt.title('Total Sales per Device')
+plt.show()
+
+#Total sales per ad
+total_sales_per_ads = df['Total conversion value, GBP'].groupby(df["Ad"]).sum()
+print(total_sales_per_ads)
+plt.pie(total_sales_per_ads,labels=total_sales_per_ads.index,autopct='%1.1f%%')
+plt.title('Total Sales from Ad types')
+plt.show()
+
+
+#Calculate Roas
+ROAS=df['Total conversion value, GBP'].sum()/df['Spend, GBP'].sum()
+print("Return of Ad Spend:",ROAS)
+#ROAS Per Month
+ROAS_per_month=df['Total conversion value, GBP'].groupby(df["Month"]).sum()/df['Spend, GBP'].groupby(df["Month"]).sum()
+print(ROAS_per_month)
+months = ROAS_per_month.index
+roas = ROAS_per_month.values
+plt.bar(months,roas)
+plt.xlabel('Month')
+plt.ylabel('ROAS')
+plt.title('ROAS per Month')
+plt.show()
+
+#Roas per City
+ROAS_per_city=df['Total conversion value, GBP'].groupby(df["City"]).sum()/df['Spend, GBP'].groupby(df["City"]).sum()
+print(ROAS_per_city)
+plt.pie(ROAS_per_city,labels=ROAS_per_city.index,autopct='%1.1f%%')
+plt.title('ROAS per City')
+plt.show()
+
+#relation between Clicks vs conversions
+plt.scatter(df['Clicks'],df['Conversions'])
+plt.xlabel('Clicks')
+plt.ylabel(' conversion value, GBP')
+plt.title('Clicks vs conversion ')
+plt.show()
+
+
+conversion_rate=(df['Conversions'].sum()/df['Clicks'].sum())*100
+print("conversion rate:",conversion_rate)
+
+conversion_city=df['Conversions'].groupby(df["City"]).sum()/df['Clicks'].groupby(df["City"]).sum()*100
+print("Conversion from  city",conversion_city)
+
+conversion_device=df['Conversions'].groupby(df["Device"]).sum()/df['Clicks'].groupby(df["Device"]).sum()*100
+print("conversion from device",conversion_device)
+
+
+conversion_month=df['Conversions'].groupby(df["Month"]).sum()/df['Clicks'].groupby(df["Month"]).sum()*100
+print("conversion from month",conversion_month)
