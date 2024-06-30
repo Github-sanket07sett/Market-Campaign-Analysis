@@ -316,8 +316,15 @@ plt.ylabel('Clicks')
 plt.title('Impressions vs Clicks')
 plt.show()
 
+impression_click_campaign=df['Impressions'].groupby(df["Campaign"]).sum()
+print("impression from campaign:",impression_click_campaign)
+sns.scatterplot(x='Impressions', y='Clicks', hue='Campaign', data=df)
+plt.xlabel('Impressions')
+plt.ylabel('Clicks')
+plt.title('Impressions vs Clicks by Campaign')
+plt.show()
 
-#Correlstion Matrix
+#Correlation Matrix
 corr_matrix=df[["Likes (Reactions)", "Shares", "Comments"]].corr()
 print(corr_matrix)
 sns.heatmap(corr_matrix,annot=True,cmap='coolwarm')
