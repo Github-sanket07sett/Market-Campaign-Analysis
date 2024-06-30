@@ -168,20 +168,26 @@ plt.ylabel(' conversion value, GBP')
 plt.title('Clicks vs conversion ')
 plt.show()
 
-
+#Conversion rate
 conversion_rate=(df['Conversions'].sum()/df['Clicks'].sum())*100
 print("conversion rate:",conversion_rate)
 
+#conversion Per city
 conversion_city=df['Conversions'].groupby(df["City"]).sum()/df['Clicks'].groupby(df["City"]).sum()*100
 print("Conversion from  city",conversion_city)
 
+Conversion per device
 conversion_device=df['Conversions'].groupby(df["Device"]).sum()/df['Clicks'].groupby(df["Device"]).sum()*100
 print("conversion from device",conversion_device)
 
-
+#conversion Per month
 conversion_month=df['Conversions'].groupby(df["Month"]).sum()/df['Clicks'].groupby(df["Month"]).sum()*100
 print("conversion from month",conversion_month)
 
+#profit
+profit=df['Total conversion value, GBP'].sum()-df['Spend, GBP'].sum()
+print("profit:",profit)
+#profit per city
 profit_city=df['Total conversion value, GBP'].groupby(df["City"]).sum()-df['Spend, GBP'].groupby(df["City"]).sum()
 print("profit from city:",profit_city)
 plt.bar(profit_city.index,profit_city.values)
@@ -190,6 +196,7 @@ plt.ylabel('Profit')
 plt.title('Profit from City')
 plt.show()
 
+#profit per channel
 profit_channel=df['Total conversion value, GBP'].groupby(df["Channel"]).sum()-df['Spend, GBP'].groupby(df["Channel"]).sum()
 print("profit from channel:",profit_channel)
 plt.bar(profit_channel.index,profit_channel.values)
@@ -198,6 +205,7 @@ plt.ylabel('Profit')
 plt.title('Profit from Channel')
 plt.show()
 
+#profit per month
 profit_month=df['Total conversion value, GBP'].groupby(df["Month"]).sum()-df['Spend, GBP'].groupby(df["Month"]).sum()
 print("profit from campaign:",profit_month)
 plt.bar(profit_month.index,profit_month.values)
@@ -216,3 +224,101 @@ plt.ylabel('Channel')
 plt.title('CPC from Channel')
 plt.show()
 
+# Create a pivot table
+pivot_table = df.pivot_table(index='Channel', columns='Device', values='Daily Average CPC', aggfunc='sum')
+print(pivot_table)
+# Plot the stacked bar chart
+pivot_table.plot(kind='bar', stacked=False)
+plt.xlabel('Channel')
+plt.ylabel('CPC')
+plt.title('CPC from Channel and Device')
+plt.show()
+
+#CPC  from ad
+cpc_ad=df['Daily Average CPC'].groupby(df["Ad"]).sum()
+print("cpc from ad:",cpc_ad)
+plt.pie(cpc_ad,labels=cpc_ad.index,autopct='%1.1f%%',startangle=90)
+plt.title('CPC from Ad')
+plt.legend(prop={'size': 8})
+plt.show()
+
+#CPC from Device
+cpc_device=df['Daily Average CPC'].groupby(df["Device"]).sum()
+print("cpc from device:",cpc_device)
+plt.pie(cpc_device,labels=cpc_device.index,autopct='%1.1f%%',startangle=90)
+plt.title('CPC from Device')
+plt.legend(prop={'size': 8})
+plt.show()
+
+#total Impressions per month
+total_impressions_month=df['Impressions'].groupby(df["Month"]).sum()
+print("total impressions:",total_impressions_month)
+plt.bar(total_impressions_month.index,total_impressions_month.values)
+plt.xlabel('Month')
+plt.ylabel('Total Impressions')
+plt.title('Total Impressions per Month')
+plt.show()
+
+# Create a pivot table to aggregate impressions by city and device
+impression_pivot = df.pivot_table(index='City', columns='Device', values='Impressions', aggfunc='sum')
+# Plot the stacked bar chart
+impression_pivot.plot(kind='barh', stacked=False)
+plt.xlabel('City')
+plt.ylabel('Impressions')
+plt.title('Impressions by City and Device')
+plt.show()
+
+#Impression per channel
+impression_channel= df['Impressions'].groupby(df["Channel"]).sum()
+print("impression from channel:",impression_channel)
+plt.pie(impression_channel,labels=impression_channel.index,autopct='%1.1f%%',startangle=90)
+plt.title('Impression from Channel')
+plt.legend(prop={'size': 8})
+plt.show()
+
+#impression distribution
+plt.figure(figsize=(10, 6))
+sns.boxplot(x='Channel', y='Impressions', hue='Device', data=df)
+plt.xlabel('Channel')
+plt.ylabel('Impressions')
+_ = plt.title('Impressions Distribution by Channel and Device')
+
+like_pivot = df.pivot_table(index='Channel', columns='Device', values='Likes (Reactions)', aggfunc='sum')
+print(pivot_table)
+# Plot the stacked bar chart
+like_pivot.plot(kind='bar', stacked=False)
+plt.xlabel('Channel')
+plt.ylabel('Likes')
+plt.title('Likes by Channel and Device')
+plt.show()
+
+Comment_Pivot = df.pivot_table(index='Channel', columns='Device', values='Comments', aggfunc='sum')
+print(Comment_Pivot)
+# Plot the stacked bar chart
+Comment_Pivot.plot(kind='bar', stacked=False)
+plt.xlabel('Channel')
+plt.ylabel('Comments')
+plt.title('Comments by Channel and Device')
+plt.show()
+
+plt.figure(figsize=(10, 6))
+sns.boxplot(x='City', y='Impressions', hue='Device', data=df)
+plt.xlabel('City')
+plt.ylabel('Impressions')
+_ = plt.title('Impressions Distribution by City and Device')
+
+#impression vs Clicks
+impression_clicks=df['Impressions'].groupby(df["Clicks"]).sum()
+print("impression from clicks:",impression_clicks)
+plt.scatter(df['Impressions'],df['Clicks'])
+plt.xlabel('Impressions')
+plt.ylabel('Clicks')
+plt.title('Impressions vs Clicks')
+plt.show()
+
+
+#Correlstion Matrix
+corr_matrix=df[["Likes (Reactions)", "Shares", "Comments"]].corr()
+print(corr_matrix)
+sns.heatmap(corr_matrix,annot=True,cmap='coolwarm')
+plt.show()
