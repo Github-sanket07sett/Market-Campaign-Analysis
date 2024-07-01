@@ -1,4 +1,4 @@
-![Screenshot 2024-07-01 110947](https://github.com/Github-sanket07sett/Market-Campaign-Analysis/assets/137095374/14b9eea2-e5ee-4dd4-a1fb-f13639f2c48f)![Screenshot 2024-07-01 110928](https://github.com/Github-sanket07sett/Market-Campaign-Analysis/assets/137095374/61a589e7-5273-4c5a-96da-cfc3ecb8d14f)# Onyx Marketing Campaign Analysis
+# Onyx Marketing Campaign Analysis
 This repository contains the analysis of the Onyx marketing campaign data, focusing on the performance of different ad campaigns across various cities and channels. The analysis leverages Python for data manipulation and visualization to derive insights from the data.
 ## TABLE OF CONTENTS
 - [Project overview](#project-overview)
