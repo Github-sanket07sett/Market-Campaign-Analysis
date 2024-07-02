@@ -43,6 +43,7 @@ The dataset includes the following columns:
 5. Insights: Provides actionable insights based on the data analysis.
 
 ## Key insights
+some of the Insights are here. Please Go through the Market.ipynb file for detailed analysis.
 ![Screenshot 2024-07-01 110928](https://github.com/Github-sanket07sett/Market-Campaign-Analysis/assets/137095374/6a58100e-7415-4e3a-823f-5faf7fcc6d0b)
 ![Screenshot 2024-07-01 110947](https://github.com/Github-sanket07sett/Market-Campaign-Analysis/assets/137095374/83949619-a8f4-440d-a68e-d1cbad89e1a9)
 
