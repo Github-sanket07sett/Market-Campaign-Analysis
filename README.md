@@ -51,5 +51,24 @@ The dataset includes the following columns:
 some of the Insights are here. Please Go through the ## Market.ipynb file for detailed analysis.
 ![Screenshot 2024-07-01 110928](https://github.com/Github-sanket07sett/Market-Campaign-Analysis/assets/137095374/6a58100e-7415-4e3a-823f-5faf7fcc6d0b)
 ![Screenshot 2024-07-01 110947](https://github.com/Github-sanket07sett/Market-Campaign-Analysis/assets/137095374/83949619-a8f4-440d-a68e-d1cbad89e1a9)
-
+## Key Visualisations
+ ### Correlation Matrix
+#### Description: This heatmap visualizes the correlation between different social media engagement metrics: Likes (Reactions), Shares, and Comments.
+#### Insights:
+1. Likes and Shares have a moderate positive correlation (0.3).
+2. There is a weak positive correlation between Likes and Comments (0.061).
+3. Shares and Comments have a negligible correlation (-0.0084).
+### Scatter Plot: Impressions vs. Clicks by Campaign
+#### Description: This scatter plot shows the relationship between the number of impressions and clicks for different campaigns (Spring, Summer, Fall).
+#### Insights:
+1. There is a positive correlation between impressions and clicks across all campaigns.
+2. Spring campaign has the highest spread of impressions and clicks, indicating a wide range of engagement.
+3. Summer campaign shows lower impressions and clicks compared to Spring and Fall.
+4. Fall campaign also shows a strong positive correlation, but with a slightly lower range compared to Spring.
+### Bar Chart: Total Sales per Month
+#### Description: This bar chart shows the total sales conversion values per month in GBP.
+#### Insights:
+1. November has the highest total sales, followed by October and September.
+2. The summer months (June, July, August) have relatively lower sales compared to the fall months.
+3. There is a noticeable increase in sales starting from September, peaking in November.
 
