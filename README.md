@@ -2,7 +2,6 @@
 This repository contains the analysis of the Onyx marketing campaign data, focusing on the performance of different ad campaigns across various cities and channels. The analysis leverages Python for data manipulation and visualization to derive insights from the data.
 ## TABLE OF CONTENTS
 - [Project overview](#project-overview)
-- [Data Sources](#data-sources)
 - [Methodology](#methodology)
 - [Key Insights](#key-insights)
 ## Project overview
@@ -42,8 +41,15 @@ The dataset includes the following columns:
 4. Performance Metrics: Analyzes the performance of campaigns by channel, city, and device.
 5. Insights: Provides actionable insights based on the data analysis.
 
+## CODE SNIPPETS
+![s1](https://github.com/Github-sanket07sett/Market-Campaign-Analysis/assets/137095374/98ec7d93-338a-40d2-bc98-2734f9fe5f75)
+![s2](https://github.com/Github-sanket07sett/Market-Campaign-Analysis/assets/137095374/26d42165-4641-4f3b-a11c-3f9674052cbe)
+![s3](https://github.com/Github-sanket07sett/Market-Campaign-Analysis/assets/137095374/6e2a21b1-c7db-40bc-a02c-94d202681f94)
+![s4](https://github.com/Github-sanket07sett/Market-Campaign-Analysis/assets/137095374/8364901f-9ba0-489b-bd7d-8c8c2fda3325)
+![s7](https://github.com/Github-sanket07sett/Market-Campaign-Analysis/assets/137095374/4e981e9a-bb35-4de6-9165-2328b08004ba)
 ## Key insights
-some of the Insights are here. Please Go through the Market.ipynb file for detailed analysis.
+some of the Insights are here. Please Go through the ## Market.ipynb file for detailed analysis.
 ![Screenshot 2024-07-01 110928](https://github.com/Github-sanket07sett/Market-Campaign-Analysis/assets/137095374/6a58100e-7415-4e3a-823f-5faf7fcc6d0b)
 ![Screenshot 2024-07-01 110947](https://github.com/Github-sanket07sett/Market-Campaign-Analysis/assets/137095374/83949619-a8f4-440d-a68e-d1cbad89e1a9)
+
 
