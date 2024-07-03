@@ -3,6 +3,7 @@ This repository contains the analysis of the Onyx marketing campaign data, focus
 ## TABLE OF CONTENTS
 - [Project overview](#project-overview)
 - [Methodology](#methodology)
+- [CODE SNIPPETS](#code-snippets)
 - [Key Insights](#key-insights)
 ## Project overview
 The Onyx Marketing Campaign Analysis project aims to provide insights into the effectiveness of various ad campaigns conducted on different channels such as Facebook. The data includes metrics such as impressions, clicks, conversions, and more, segmented by date, city, and device.
