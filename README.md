@@ -43,8 +43,7 @@ The dataset includes the following columns:
 5. Insights: Provides actionable insights based on the data analysis.
 
 ## CODE SNIPPETS
-![s1](https://github.com/Github-sanket07sett/Market-Campaign-Analysis/assets/137095374/98ec7d93-338a-40d2-bc98-2734f9fe5f75)
-![s2](https://github.com/Github-sanket07sett/Market-Campaign-Analysis/assets/137095374/26d42165-4641-4f3b-a11c-3f9674052cbe)
+![s1](https://github.com/Github-sanket07sett/Market-Campaign-Analysis/assets/137095374/98ec7d93-338a-40d2-bc98-2734f9fe5f75)![s2](https://github.com/Github-sanket07sett/Market-Campaign-Analysis/assets/137095374/26d42165-4641-4f3b-a11c-3f9674052cbe)
 ![s3](https://github.com/Github-sanket07sett/Market-Campaign-Analysis/assets/137095374/6e2a21b1-c7db-40bc-a02c-94d202681f94)
 ![s4](https://github.com/Github-sanket07sett/Market-Campaign-Analysis/assets/137095374/8364901f-9ba0-489b-bd7d-8c8c2fda3325)
 ![s7](https://github.com/Github-sanket07sett/Market-Campaign-Analysis/assets/137095374/4e981e9a-bb35-4de6-9165-2328b08004ba)
