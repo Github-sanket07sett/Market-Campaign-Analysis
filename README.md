@@ -49,6 +49,10 @@ The dataset includes the following columns:
 ![s7](https://github.com/Github-sanket07sett/Market-Campaign-Analysis/assets/137095374/4e981e9a-bb35-4de6-9165-2328b08004ba)
 ### Live Dashboard
 https://app.powerbi.com/view?r=eyJrIjoiOTI1NzFmZmMtMjFmMy00Y2EyLThlNTAtNmYzZTBlNDNhODg3IiwidCI6ImRmODY3OWNkLWE4MGUtNDVkOC05OWFjLWM4M2VkN2ZmOTVhMCJ9
+
+
+![Screenshot 2024-07-06 123909](https://github.com/Github-sanket07sett/Market-Campaign-Analysis/assets/137095374/d49cdfbe-9cbf-4681-b8ad-7fd7a69bfb21)
+
 ## Key insights
 some of the Insights are here. Please Go through the ## Market.ipynb file for detailed analysis.
 ![Screenshot 2024-07-01 110928](https://github.com/Github-sanket07sett/Market-Campaign-Analysis/assets/137095374/6a58100e-7415-4e3a-823f-5faf7fcc6d0b)
