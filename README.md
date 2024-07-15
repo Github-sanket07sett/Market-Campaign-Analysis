@@ -4,6 +4,7 @@ This repository contains the analysis of the Onyx marketing campaign data, focus
 - [Project overview](#project-overview)
 - [Methodology](#methodology)
 - [CODE SNIPPETS](#code-snippets)
+- [Live Dashboard](#live-dashboard)
 - [Key Insights](#key-insights)
 ## Project overview
 The Onyx Marketing Campaign Analysis project aims to provide insights into the effectiveness of various ad campaigns conducted on different channels such as Facebook. The data includes metrics such as impressions, clicks, conversions, and more, segmented by date, city, and device.
@@ -48,7 +49,7 @@ The dataset includes the following columns:
 ![s4](https://github.com/Github-sanket07sett/Market-Campaign-Analysis/assets/137095374/8364901f-9ba0-489b-bd7d-8c8c2fda3325)
 ![s7](https://github.com/Github-sanket07sett/Market-Campaign-Analysis/assets/137095374/4e981e9a-bb35-4de6-9165-2328b08004ba)
 ### Live Dashboard
-https://app.powerbi.com/view?r=eyJrIjoiOTI1NzFmZmMtMjFmMy00Y2EyLThlNTAtNmYzZTBlNDNhODg3IiwidCI6ImRmODY3OWNkLWE4MGUtNDVkOC05OWFjLWM4M2VkN2ZmOTVhMCJ9
+[Live link](https://app.powerbi.com/view?r=eyJrIjoiOTI1NzFmZmMtMjFmMy00Y2EyLThlNTAtNmYzZTBlNDNhODg3IiwidCI6ImRmODY3OWNkLWE4MGUtNDVkOC05OWFjLWM4M2VkN2ZmOTVhMCJ9)
 
 
 ![Screenshot 2024-07-06 123909](https://github.com/Github-sanket07sett/Market-Campaign-Analysis/assets/137095374/d49cdfbe-9cbf-4681-b8ad-7fd7a69bfb21)
