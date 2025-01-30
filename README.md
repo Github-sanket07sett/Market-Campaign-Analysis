@@ -2,12 +2,30 @@
 This repository contains the analysis of the Onyx marketing campaign data, focusing on the performance of different ad campaigns across various cities and channels. The analysis leverages Python for data manipulation and visualization to derive insights from the data.
 ## TABLE OF CONTENTS
 - [Project overview](#project-overview)
-- [Methodology](#methodology)
+- [Explanation](#explanation)
 - [CODE SNIPPETS](#code-snippets)
 - [Live Dashboard](#live-dashboard)
 - [Key Insights](#key-insights)
 ## Project overview
 The Onyx Marketing Campaign Analysis project aims to provide insights into the effectiveness of various ad campaigns conducted on different channels such as Facebook. The data includes metrics such as impressions, clicks, conversions, and more, segmented by date, city, and device.
+## Explanation
+### S - Situation:
+Onyx wanted to evaluate the effectiveness of their marketing campaigns across various digital channels (e.g., Facebook) by analyzing impressions, clicks, conversions, and engagement metrics. The goal was to determine which channels, cities, and devices performed best and optimize ad spend accordingly.
+
+#### T - Task:
+I was responsible for analyzing the dataset to identify key trends, compare channel performance, assess device-based engagement, and provide cost-efficiency insights. Additionally, I needed to visualize key findings to support data-driven decision-making.
+
+#### A - Action:
+- Cleaned and processed the dataset to handle missing values and ensure consistency.
+- Performed Exploratory Data Analysis (EDA) using visualizations like correlation matrices, scatter plots, and bar charts to identify patterns.
+- Analyzed impressions, clicks, and conversion rates across different cities, channels, and devices.
+- Evaluated cost-effectiveness using metrics like Daily Average CPC and spend vs. conversion value.
+- Built a live dashboard for real-time monitoring of campaign performance.
+#### R - Result:
+- Discovered that Spring campaigns had the widest engagement, while Summer had lower impressions and clicks.
+- Found that November had the highest sales conversions, showing a seasonal trend.
+- Identified a moderate correlation (0.3) between Likes and Shares, but minimal correlation between Shares and Comments.
+- Helped optimize ad spending by identifying high-performing cities and cost-effective channels.
 ## Objectives
 The main objectives of this project are:
 1. Analyze Campaign Performance: Evaluate the performance of ad campaigns based on key metrics like impressions, clicks, and conversions.
@@ -58,24 +76,5 @@ The dataset includes the following columns:
 some of the Insights are here. Please Go through the ## Market.ipynb file for detailed analysis.
 ![Screenshot 2024-07-01 110928](https://github.com/Github-sanket07sett/Market-Campaign-Analysis/assets/137095374/6a58100e-7415-4e3a-823f-5faf7fcc6d0b)
 ![Screenshot 2024-07-01 110947](https://github.com/Github-sanket07sett/Market-Campaign-Analysis/assets/137095374/83949619-a8f4-440d-a68e-d1cbad89e1a9)
-## Key Visualisations
- ### Correlation Matrix
-#### Description: This heatmap visualizes the correlation between different social media engagement metrics: Likes (Reactions), Shares, and Comments.
-#### Insights:
-1. Likes and Shares have a moderate positive correlation (0.3).
-2. There is a weak positive correlation between Likes and Comments (0.061).
-3. Shares and Comments have a negligible correlation (-0.0084).
-### Scatter Plot: Impressions vs. Clicks by Campaign
-#### Description: This scatter plot shows the relationship between the number of impressions and clicks for different campaigns (Spring, Summer, Fall).
-#### Insights:
-1. There is a positive correlation between impressions and clicks across all campaigns.
-2. Spring campaign has the highest spread of impressions and clicks, indicating a wide range of engagement.
-3. Summer campaign shows lower impressions and clicks compared to Spring and Fall.
-4. Fall campaign also shows a strong positive correlation, but with a slightly lower range compared to Spring.
-### Bar Chart: Total Sales per Month
-#### Description: This bar chart shows the total sales conversion values per month in GBP.
-#### Insights:
-1. November has the highest total sales, followed by October and September.
-2. The summer months (June, July, August) have relatively lower sales compared to the fall months.
-3. There is a noticeable increase in sales starting from September, peaking in November.
+
 
